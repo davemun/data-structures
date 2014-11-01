@@ -2,11 +2,10 @@ var makeTree = function(value){
   var newTree = {};
   newTree.value = value;
   newTree.children = [];
-  extend( newTree, treeMethods );
+  _.extend( newTree, treeMethods );//switched from other extend
 
   return newTree;
 };
-
 
 
 
@@ -28,6 +27,8 @@ treeMethods.contains = function(target){
       status = true;
     }
     
+
+
     if(node.children.length > 0){
       for(var i = 0; i < node.children.length;i++){
         recurseFunk( node.children[i] );
@@ -55,12 +56,6 @@ treeMethods.contains2 = function(targetValue, targetNode){
 
   for(var i = 0; i < targetNode.children.length; i++){
     return (false || this.contains2(targetValue, targetNode.children[i]));
-  }
-};
-
-var extend = function(to, from) {
-  for (var key in from) {
-    to[key] = from[key];
   }
 };
 
