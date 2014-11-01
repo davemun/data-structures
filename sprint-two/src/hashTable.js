@@ -31,7 +31,7 @@ HashTable.prototype.manageStorageSize = function(){
         newStorage.storage.get(i).push( [ arr[0],arr[1] ] );
         ++newStorage.occupiedBuckets;
         }
-      });
+      );
     });
 
     this._storage = newStorage.storage;
