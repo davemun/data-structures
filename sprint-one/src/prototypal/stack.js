@@ -23,7 +23,6 @@ var stackMethods = {
       return temp;
     }
   }
-
 };
 
 // [0:a] size = 1
